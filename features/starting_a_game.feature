@@ -13,4 +13,3 @@ Scenario: Place ships
   Given I am on place ships page
   And I have placed all 5 ships on board
   Then wait for player 2 to enter game
-  
