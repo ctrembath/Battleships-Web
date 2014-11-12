@@ -1,5 +1,5 @@
 Given(/^I am on the homepage$/) do
-  visit("/")
+  visit "/"
   # save_and_open_page
 end
 
@@ -15,22 +15,31 @@ When(/^Press the "(.*?)" button$/) do |button_name|
  click_button(button_name)
 end
 
-Then(/^I should wait for another player to join$/) do
-  expect(page).to have_content("Waiting for the next player,") 
+Then(/^I should be asked to enter some ships$/) do
+  expect(page).to have_content("Please enter the coordinates and orientation of the ships you want to place")
 end
 
-Given(/^I am on the waiting page$/) do
-  expect(player).to be on
+Given(/^I have registered$/) do
+  visit "/"
+  step("I fill out my name")
+  click_button('Submit')
+
 end
 
-When(/^player two has filled out their name$/) do
-  pending # express the regexp above with the code you wish you had
+Given(/^I have entered my ships$/) do
+   fill_in "ship_one", :with => "a1"
+   select('vertical', :from => 'ship_one_orientation')
+   fill_in "ship_two", :with => "b1"
+   select('vertical', :from => 'ship_two_orientation')
+   fill_in "ship_three", :with => "c1"
+   select('vertical', :from => 'ship_three_orientation')
+   fill_in "ship_four", :with => "d1"
+   select('vertical', :from => 'ship_four_orientation')
+   fill_in "ship_five", :with => "e1"
+   select('vertical', :from => 'ship_five_orientation')
+   click_button'place_ships'
 end
 
-When(/^pressed submit$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should be invited to place my ships$/) do
+Then(/^I should wait for anouther player to join$/) do
   pending # express the regexp above with the code you wish you had
 end
