@@ -11,11 +11,26 @@ When(/^Press the submit button $/) do
  click_button('Submit')
 end
 
-When(/^Press the "(.*?)" button$/) do |arg1|
- click_button(arg1)
+When(/^Press the "(.*?)" button$/) do |button_name|
+ click_button(button_name)
 end
 
-Then(/^I should be on the place ships$/) do
-  expect(page).to have_content("place ships, Clare") 
+Then(/^I should wait for another player to join$/) do
+  expect(page).to have_content("Waiting for the next player,") 
 end
 
+Given(/^I am on the waiting page$/) do
+  expect(player).to be on
+end
+
+When(/^player two has filled out their name$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+When(/^pressed submit$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^I should be invited to place my ships$/) do
+  pending # express the regexp above with the code you wish you had
+end

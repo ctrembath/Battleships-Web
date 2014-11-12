@@ -1,6 +1,9 @@
 require 'sinatra/base'
 require_relative '../lib/game'
 require_relative '../lib/player'
+require_relative '../lib/board'
+require_relative '../lib/cell'
+
 
 class Battleships < Sinatra::Base
 
@@ -8,16 +11,20 @@ class Battleships < Sinatra::Base
   GAME = Game.new
 
   get '/' do
-  erb :index
+    erb :index
   end
 
   post '/create_player' do
     player= Player.new
     player.name = params[:player_name]
-    GAME.add_player(player)
-    @name = GAME.player1.name
-    erb :place_ships
+    player.board= Board.new(Cell)
+    if GAME.ready?
+        redirect  '/play'
+    else
+    erb :waiting
+
   end
+end
 
 
   # start the server if ruby file executed directly
