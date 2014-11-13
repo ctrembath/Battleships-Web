@@ -1,69 +1,67 @@
-<!-- <html> -->
+<html>
+<center>
 
+<h3> heyy, <%= @player_name %>
 
-<body>
-
-
-      <h3> Welcome <%= @player_name %>
-
-<h4>Please enter the coordinates and orientation of the ships you want to place</h4>
+<h4>plz enter the coordinates and orientation of the ships you wanna place</h4>
 
 sH^p naM3
 <form action="placing_ships">
-  <select name="Ship Type">
+  <select name="ship_type">
     <option value="ship_one">Aircraft Carrier</option>
     <option value="ship_two">Battleship</option>
     <option value="ship_three">Destroyer</option>
     <option value="ship_four">Submarine</option>
     <option value="ship_five">Patrol Boat</option>
   </select>
-</form>
-SHIPS HEAD POSITI0N
-----------h0r^z0nt-l c00rd^naTe --------
+</form><br>
+
+      <b>SHIPS HEAD POSITI0N</b><br>
+      ----------h0r^z0nt-l c00rd^naTe --------
 <form action="select_horizontal_coordinate">
-<select name="coordinate">
-<option value="a">A</option>
-<option value="b">B</option>
-<option value="c">C</option>
-<option value="d">D</option>
-<option value="e">E</option>
-<option value="f">F</option>
-<option value="g">G</option>
-<option value="h">H</option>
-<option value="i">I</option>
-<option value="j">J</option>
-</select>
+   <select name="horizontal_coordinate">
+      <option value="a">A</option>
+      <option value="b">B</option>
+      <option value="c">C</option>
+      <option value="d">D</option>
+      <option value="e">E</option>
+      <option value="f">F</option>
+      <option value="g">G</option>
+      <option value="h">H</option>
+      <option value="i">I</option>
+      <option value="j">J</option>
+   </select>
 </form>
 
 ||||||||| veRtIca| c0ord^n8 |||||||||||
 <form action="select_vertical_coordinate">
-<select name="coordinate">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
+    <select name="vertical_coordinate">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
 </select>
 </form>
 
 <^> dIr3ct^0N 0f Ta^l <^>
 <form action="direction">
-<select name="direction">
-<option value="n">n0rth</option>
-<option value="e">3ast</option>
-<option value="s">$0uTh</option>
-<option value="w">we$t</option>
-</select>
+    <select name="direction">
+      <option value="n">n0rth</option>
+      <option value="e">3ast</option>
+      <option value="s">$0uTh</option>
+      <option value="w">we$t</option>
+    </select>
 </form>
+<br>
 
 
 
 <input type= "submit" value = "Submit">
 
-</body>
 </html>

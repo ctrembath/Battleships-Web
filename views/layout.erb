@@ -1,13 +1,12 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>keep battlin, <%= @player_name %></title>
   </head>
   <body>
-    <% if @name %>
-      <h3> Welcome <%= @name %>
-    <% end %>
-
+    
     <%= yield %>
+
+
   </body>
 </html>

@@ -17,7 +17,7 @@ When(/^Press the "(.*?)" button$/) do |button_name|
 end
 
 Then(/^I should be asked to enter some ships$/) do
-  expect(page).to have_content("Please enter the coordinates and orientation of the ships you want to place")
+  expect(page).to have_content("plz enter the coordinates and orientation of the ships you wanna place")
 end
 
 Given(/^I have registered$/) do
