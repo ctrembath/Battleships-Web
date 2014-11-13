@@ -6,6 +6,7 @@ require_relative '../lib/cell'
 
 
 class Battleships < Sinatra::Base
+enable :sessions
 
   set :views, Proc.new { File.join(root, "..","views") }
   GAME = Game.new
@@ -16,7 +17,7 @@ class Battleships < Sinatra::Base
 
   post '/place_ships' do
     player= Player.new
-    player.name = params[:player_name]
+    @player_name = params[:player_name]
     player.board= Board.new(Cell)
     if GAME.ready?
         redirect  '/play'
@@ -25,7 +26,7 @@ class Battleships < Sinatra::Base
   end
   end
 
-    get '/place_ships' do
+    post '/place_ships' do
       erb :place_ships
     end
 

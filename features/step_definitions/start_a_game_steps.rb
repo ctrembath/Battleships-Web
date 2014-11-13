@@ -41,9 +41,9 @@ Given(/^I have entered my ships coordinates$/) do
 end
 
 Given(/^I have clicked the 'Place Ships' Button$/) do
-  pending # express the regexp above with the code you wish you had
+ click_button('Submit')
 end
 
 Then(/^I should wait for anouther player to join$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content("waiting for player 2 to join and place ships")
 end

@@ -3,7 +3,11 @@
 
 <body>
 
-<header>Please enter the coordinates and orientation of the ships you want to place</header>
+
+      <h3> Welcome <%= @player_name %>
+
+<h4>Please enter the coordinates and orientation of the ships you want to place</h4>
+
 
 <form action="placing_ships">
   <select name="Ship Type">
@@ -48,6 +52,8 @@ veRtIca| c0ord^n8
 <option value="10">10</option>
 </select>
 </form>
+
+<input type= "submit" value = "Submit">
 
 </body>
 </html>
