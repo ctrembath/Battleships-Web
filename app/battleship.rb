@@ -14,7 +14,7 @@ class Battleships < Sinatra::Base
     erb :index
   end
 
-  post '/create_player' do
+  post '/place_ships' do
     player= Player.new
     player.name = params[:player_name]
     player.board= Board.new(Cell)
@@ -22,9 +22,13 @@ class Battleships < Sinatra::Base
         redirect  '/play'
     else
     erb :place_ships
-
   end
-end
+  end
+
+    get '/place_ships' do
+      erb :place_ships
+    end
+
 
 
   # start the server if ruby file executed directly

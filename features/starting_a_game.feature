@@ -9,6 +9,8 @@ Scenario: Registering
   And Press the "Submit" button
   Then I should be asked to enter some ships
   
+Scenario: Placing Ships 
   Given I have registered
-  And I have entered my ships
+  And I have entered my ships coordinates
+  And I have clicked the 'Place Ships' Button
   Then I should wait for anouther player to join

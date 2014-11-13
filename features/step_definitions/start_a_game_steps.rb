@@ -11,6 +11,7 @@ When(/^Press the submit button $/) do
  click_button('Submit')
 end
 
+
 When(/^Press the "(.*?)" button$/) do |button_name|
  click_button(button_name)
 end
@@ -26,18 +27,21 @@ Given(/^I have registered$/) do
 
 end
 
-Given(/^I have entered my ships$/) do
-   fill_in "ship_one", :with => "a1"
+Given(/^I have entered my ships coordinates$/) do
+   fill_in 'ship_one', :with => 'a1'
    select('vertical', :from => 'ship_one_orientation')
-   fill_in "ship_two", :with => "b1"
+   fill_in 'ship_two', :with => 'b1'
    select('vertical', :from => 'ship_two_orientation')
-   fill_in "ship_three", :with => "c1"
+   fill_in 'ship_three', :with => 'c1'
    select('vertical', :from => 'ship_three_orientation')
-   fill_in "ship_four", :with => "d1"
+   fill_in 'ship_four', :with => 'd1'
    select('vertical', :from => 'ship_four_orientation')
-   fill_in "ship_five", :with => "e1"
+   fill_in 'ship_five', :with => 'e1'
    select('vertical', :from => 'ship_five_orientation')
-   click_button'place_ships'
+end
+
+Given(/^I have clicked the 'Place Ships' Button$/) do
+  pending # express the regexp above with the code you wish you had
 end
 
 Then(/^I should wait for anouther player to join$/) do
