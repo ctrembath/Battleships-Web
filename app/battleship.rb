@@ -3,7 +3,7 @@ require_relative '../lib/game'
 require_relative '../lib/player'
 require_relative '../lib/board'
 require_relative '../lib/cell'
-
+require_relative '../lib/ships'
 
 class Battleships < Sinatra::Base
 enable :sessions
@@ -15,7 +15,7 @@ enable :sessions
     erb :index
   end
 
-  post '/place_ships' do
+  post '/create_player' do
     player= Player.new
     @player_name = params[:player_name]
     player.board= Board.new(Cell)
@@ -27,7 +27,16 @@ enable :sessions
   end
 
     post '/place_ships' do
-      erb :place_ships
+      if GAME.ready?
+        redirect '/play'
+      else
+        p params
+       erb :place_ships
+    end
+  end
+
+    get '/play' do
+
     end
 
 

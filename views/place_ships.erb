@@ -5,8 +5,9 @@
 
 <h4>plz enter the coordinates and orientation of the ships you wanna place</h4>
 
-sH^p naM3
-<form action="placing_ships">
+      sH^p naM3
+    <br>
+<form action="place_ships" method= "post" name="ship_form">
   <select name="ship_type">
     <option value="ship_one">Aircraft Carrier</option>
     <option value="ship_two">Battleship</option>
@@ -14,12 +15,13 @@ sH^p naM3
     <option value="ship_four">Submarine</option>
     <option value="ship_five">Patrol Boat</option>
   </select>
-</form><br>
+    <br>
+        <b>SHIPS HEAD POSITI0N</b>
+    <br>
 
-      <b>SHIPS HEAD POSITI0N</b><br>
-      ----------h0r^z0nt-l c00rd^naTe --------
-<form action="select_horizontal_coordinate">
-   <select name="horizontal_coordinate">
+    ||||||||| veRtIca| c0ord^n8 |||||||||||
+    <br>
+   <select name="vertical_coordinate">
       <option value="a">A</option>
       <option value="b">B</option>
       <option value="c">C</option>
@@ -31,11 +33,10 @@ sH^p naM3
       <option value="i">I</option>
       <option value="j">J</option>
    </select>
-</form>
-
-||||||||| veRtIca| c0ord^n8 |||||||||||
-<form action="select_vertical_coordinate">
-    <select name="vertical_coordinate">
+    <br>
+     ----------h0r^z0nt-l c00rd^naTe --------
+    <br>
+    <select name="horizontal_coordinate">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -46,22 +47,24 @@ sH^p naM3
       <option value="8">8</option>
       <option value="9">9</option>
       <option value="10">10</option>
-</select>
-</form>
+      </select>
+    <br>
 
-<^> dIr3ct^0N 0f Ta^l <^>
-<form action="direction">
+    <^> dIr3ct^0N 0f Ta^l <^>
+  <br>
     <select name="direction">
       <option value="n">n0rth</option>
       <option value="e">3ast</option>
       <option value="s">$0uTh</option>
       <option value="w">we$t</option>
     </select>
+  <br>
+  <br>
+
+<input type= "submit" value = "place ship">
 </form>
 <br>
 
 
-
-<input type= "submit" value = "Submit">
 
 </html>
